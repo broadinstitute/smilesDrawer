@@ -362,6 +362,15 @@ class SvgDrawer {
         isotope = atom.bracket.isotope;
       }
 
+      if (
+        isCarbon &&
+        (opts.explicitCarbons === 'all' ||
+          (opts.explicitCarbons === 'isotopes' && isotope != 0))
+      ) {
+        atom.drawExplicit = true;
+        if (!vertex.isTerminal()) hydrogens = 0;
+      }
+
       if (opts.atomVisualization === 'allballs') {
         svgWrapper.drawBall(vertex.position.x, vertex.position.y, element);
       } else if ((atom.isDrawn && (!isCarbon || atom.drawExplicit || isTerminal || atom.hasAttachedPseudoElements)) || graph.vertices.length === 1) {
