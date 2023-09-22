@@ -2,7 +2,9 @@
 
 No server, no images, no templates, just a SMILES 😊
 
-Current Version: **2.1.5**
+Forked to implement and test new features for mxp.
+
+Current Version: **2.1.8**
 
 <table style="width: 100%; table-layout: fixed">
     <tbody>
@@ -197,6 +199,7 @@ The following options are available:
 | Padding                                                         | padding                     | number                              | 20.0          |
 | Use experimental features                                       | experimental                | boolean                             | false         |
 | Show Terminal Carbons (CH3)                                     | terminalCarbons             | boolean                             | false         |
+| Show explicit carbons                                           | explicitCarbons             | string ['none', 'all', 'isotopes']  | 'none'        |
 | Show explicit hydrogens                                         | explicitHydrogens           | boolean                             | false         |
 | Overlap sensitivity                                             | overlapSensitivity          | number                              | 0.42          |
 | # of overlap resolution iterations                              | overlapResolutionIterations | number                              | 1             |
@@ -219,6 +222,7 @@ The default options are defined as follows:
     isomeric: true,
     debug: false,
     terminalCarbons: false,
+    explicitCarbons: 'none',
     explicitHydrogens: false,
     overlapSensitivity: 0.42,
     overlapResolutionIterations: 1,
