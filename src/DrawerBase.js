@@ -53,6 +53,7 @@ class DrawerBase {
       isomeric: true,
       debug: false,
       terminalCarbons: false,
+      explicitCarbons: 'none',
       explicitHydrogens: true,
       overlapSensitivity: 0.42,
       overlapResolutionIterations: 1,
